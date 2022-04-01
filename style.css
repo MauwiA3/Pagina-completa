@@ -105,6 +105,14 @@ header a:hover{
     font-size: 1.75em;
 }
 
+#soy-amgas .img-container{
+    background-image: url("img/mauricio-amgas.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 450px;
+    width: 400px; 
+}
+
 #soy-amgas .container{
     text-align: center;
     padding: 200px 12px;
@@ -168,7 +176,7 @@ header a:hover{
 
 #caracteristicas .container{
     text-align: center;
-    padding: 250px 12px;
+    padding: 250px 14px;
 }
 
 #caracteristicas li{
