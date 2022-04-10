@@ -106,11 +106,12 @@ header a:hover{
 }
 
 #soy-amgas .img-container{
+    align-items: center;
     background-image: url("img/mauricio-amgas.jpg");
     background-size: cover;
-    background-position: center center;
-    height: 450px;
-    width: 400px; 
+    background-position: center;
+    height: 300px;
+    width: 100%;
 }
 
 #soy-amgas .container{
