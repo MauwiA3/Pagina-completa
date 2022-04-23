@@ -1,26 +1,291 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-h1{ font-size: 3.5em;}
-h2{ font-size: 2.7em;}
-h3{ font-size: 2em;}
-p{ font-size: 1.25em;}
-ul{ list-style: none;}
-li{ font-size: 1.25em;}
 
-button{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+/*HEADER SUPERIOR*/
+
+.header__superior {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img {
+    width: 250px;
+}
+
+/*BARRA MENU*/
+
+.container__menu {
+    width: 100%;
+    height: 70px;
+    background: #6521a5;
+    padding: 0px 20px;
+}
+
+.menu {
+    max-width: 1600px;
+    margin: auto;
+    height: 100%;
+}
+
+nav {
+    height: 100%;
+}
+
+nav>ul {
+    height: 100%;
+    display: flex;
+}
+
+nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav>ul>li:first-child>a {
+    background-image: url(../img/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav>ul>li:first-child:hover>a {
+    background-image: url(../img/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav>ul>li>a:hover {
+    transform: scale(1.1);
+    background: #6521a5;
+    box-shadow: 0px 0px 10px 0px #00000080;
+}
+
+#selected {
+    transform: scale(1.1);
+    background-color: #6521a5;
+    box-shadow: 0px 0px 10px 0px #00000080;
+}
+
+/*SUBMENU*/
+
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px #00000080;
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #ffffff;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a {
+    display: block;
+    color: #6521a5;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover {
+    background: #6521a5;
+    color: #fff;
+    transform: scale(1.2);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px #00000080;
+}
+
+/*ARTICULO*/
+
+main {
+    background: #f0f0f0;
+    padding: 40px 20px;
+    margin-top: 194px;
+}
+
+/*ELEMENTOS RESPONSIVOS*/
+
+.icon__menu {
+    font-size: 26px;
+    color: #ffffff;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+
+#label__check {
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+
+    .logo img {
+        width: 200px;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        background-color: #6521a5;
+        position: fixed;
+        left: 0;
+        top: 65px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav>ul>li>a:hover {
+        transform: scale(1);
+    }
+
+    nav ul li ul {
+        left: 90px;
+    }
+
+    nav>ul>li:hover ul {
+        top: 50px;
+    }
+
+    nav>ul>li:first-child a {
+        background-position: 20px;
+    }
+
+    #selected {
+        transform: scale(1);
+    }
+
+    #label__check {
+        display: block;
+    }
+
+    .icon__menu {
+        display: flex;
+    }
+
+    #check__menu:checked~nav>ul {
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    main {
+        margin-top: 158px;
+    }
+}
+
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 1.25em;
+}
+
+button {
     font-size: 1.25em;
     font-weight: bold;
     padding: 10px 30px;
@@ -28,84 +293,83 @@ button{
     border: 2px solid #0000004d;
     box-shadow: 2px 2px 10px #00000080;
     color: #ffffff;
-    background-color: #8a2be2;
-}
-
-button:hover{
     background-color: #6521a5;
 }
 
-.container{
+button:hover {
+    background-color: #6521a5;
+}
+
+.container {
     max-width: 1400px;
     margin: auto;
 }
 
-.color-acento{ color:#8a2be2; }
-
-header{
-    background-color: #f5f5f5;
-    
+.color-acento {
+    color: #6521a5;
 }
 
-header .logo{
+header {
+    background-color: #f5f5f5;
+
+}
+
+header .logo {
     margin: 0;
     padding: 25px 30px;
     font-weight: bold;
-    color: #8a2be2;
+    color: #6521a5;
     font-size: 1.6em;
 }
 
-header .container{
+header .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header nav{
+header nav {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding-bottom: 25px;
 }
 
-header a{
+header a {
     padding: 5px 12px;
     text-decoration: none;
     font-weight: bold;
     color: black;
 }
 
-header a:hover{
+header a:hover {
     color: #8a2be2;
 }
 
-#hero{
+#hero {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
     height: 90vh;
-    background-image: linear-gradient(
-        0deg,
-        #00000080,
-        #00000080
-    )
-    ,url("img/portada.jpg");
+    background-image: linear-gradient(0deg,
+            #00000080,
+            #00000080), url("img/portada.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
 
-#hero h1{
+#hero h1 {
     color: #ffffff;
 }
 
-#hero button{
+#hero button {
     font-size: 1.75em;
 }
 
-#soy-amgas .img-container{
+#soy-amgas .img-container {
     align-items: center;
     background-image: url("img/mauricio-amgas.jpg");
     background-size: cover;
@@ -114,31 +378,31 @@ header a:hover{
     width: 100%;
 }
 
-#soy-amgas .container{
+#soy-amgas .container {
     text-align: center;
     padding: 200px 12px;
 }
 
-#mis-servicios{
+#mis-servicios {
     background-color: #1f1f1f;
     color: #ffffff;
     text-align: center;
 }
 
-#mis-servicios .container{
+#mis-servicios .container {
     padding: 150px 12px;
 }
 
-#mis-servicios h2{
+#mis-servicios h2 {
     margin-top: 0;
     font-size: 3.2em;
 }
 
-#mis-servicios p{
+#mis-servicios p {
     display: none;
 }
 
-#mis-servicios .carta{
+#mis-servicios .carta {
     background-position: center center;
     background-size: cover;
     padding: 50px 0px;
@@ -146,46 +410,37 @@ header a:hover{
     border-radius: 15px;
 }
 
-.carta:first-child{
-    background-image: linear-gradient(
-        0deg,
-        #00000080,
-        #00000080
-    )
-    ,url("img/tecnico-profesional.jpg");
+.carta:first-child {
+    background-image: linear-gradient(0deg,
+            #00000080,
+            #00000080), url("img/tecnico-profesional.jpg");
 
 }
 
-.carta:nth-child(2){
-    background-image: linear-gradient(
-        0deg,
-        #00000080,
-        #00000080
-    )
-    ,url("img/informacion.jpg");
+.carta:nth-child(2) {
+    background-image: linear-gradient(0deg,
+            #00000080,
+            #00000080), url("img/informacion.jpg");
 }
 
-.carta:nth-child(3){
-    background-image: linear-gradient(
-        0deg,
-        #00000080,
-        #00000080
-    )
-    ,url("img/mecanico-industrial.jpg");
+.carta:nth-child(3) {
+    background-image: linear-gradient(0deg,
+            #00000080,
+            #00000080), url("img/mecanico-industrial.jpg");
 
 }
 
-#caracteristicas .container{
+#caracteristicas .container {
     text-align: center;
     padding: 250px 14px;
 }
 
-#caracteristicas li{
+#caracteristicas li {
     margin: 16px 0px;
     font-weight: bold;
 }
 
-#ingresa{
+#ingresa {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,63 +451,63 @@ header a:hover{
     height: 80vh;
 }
 
-#ingresa h2{
+#ingresa h2 {
     font-size: 9vw;
 }
 
-#ingresa button{
+#ingresa button {
     font-size: 5vw;
 }
 
-.info{
+.info {
     background-color: #1e1e1e;
     color: #ffffff;
 
 }
 
-.footer-items{
+.footer-items {
     display: grid;
-    gap: 1em;   
+    gap: 1em;
 }
 
-.footer-logo{
+.footer-logo {
     width: 150px;
     display: block;
     margin-bottom: 2em;
 }
 
-.footer-contact{
+.footer-contact {
     display: flex;
     align-items: flex-start;
     gap: 5px;
 }
 
-.footer_contact-second{
+.footer_contact-second {
     margin-bottom: 1em;
 }
 
 
-.footer-icon{
+.footer-icon {
     margin-top: 3px;
 }
 
-.footer-nav{
+.footer-nav {
     margin-top: 2.5em;
     display: grid;
     gap: .8em;
 }
 
-.footer-link{
+.footer-link {
     color: #fff;
     text-decoration: none;
 }
 
-.footer-social{
+.footer-social {
     margin-top: 2em;
     margin: 0 auto;
 }
 
-.footer-media{
+.footer-media {
     width: 40px;
     height: 40px;
     display: inline-flex;
@@ -264,38 +519,38 @@ header a:hover{
     margin-right: 20px;
 }
 
-.footer_media-last{
+.footer_media-last {
     margin-right: 0;
 }
 
-@media (min-width: 850px){
-    header{
+@media (min-width: 850px) {
+    header {
         position: fixed;
         width: 100%;
     }
 
-    header .container{
+    header .container {
         flex-direction: row;
         justify-content: space-between;
     }
 
-    header nav{
+    header nav {
         flex-direction: row;
         padding-bottom: 0;
         padding-right: 20px;
     }
 
-    #hero h1{
+    #hero h1 {
         font-size: 5em;
     }
 
-    #soy-amgas .container{
+    #soy-amgas .container {
         display: flex;
         justify-content: space-evenly;
-        
+
     }
 
-    #soy-amgas .texto{
+    #soy-amgas .texto {
         width: 50%;
         max-width: 600px;
         text-align: initial;
@@ -305,43 +560,43 @@ header a:hover{
         justify-content: center;
     }
 
-    #soy-amgas h2{
+    #soy-amgas h2 {
         margin-top: 0px;
     }
 
-    #soy-amgas .img-container{
+    #soy-amgas .img-container {
         background-image: url("img/mauricio-amgas.jpg");
         background-size: cover;
         background-position: center center;
         height: 500px;
-        width: 400px; 
+        width: 400px;
     }
 
-    .carousel{
-        
+    .carousel {
+
         margin: 60px;
         border-radius: 15px;
     }
 
-    #mis-servicios .servicio{
+    #mis-servicios .servicio {
         display: flex;
         justify-content: center;
     }
 
-    #mis-servicios p{
+    #mis-servicios p {
         display: block;
         margin-bottom: 30px;
     }
 
-    #mis-servicios h2{
+    #mis-servicios h2 {
         font-size: 4em;
     }
 
-    #mis-servicios h3{
+    #mis-servicios h3 {
         margin-top: 0;
     }
 
-    #mis-servicios .carta{
+    #mis-servicios .carta {
         padding: 60px;
         background-size: 100% 150px;
         background-repeat: no-repeat;
@@ -350,95 +605,84 @@ header a:hover{
         box-shadow: 2px 2px 10px #00000080;
     }
 
-    .carta:first-child{
-        background-image: linear-gradient(
-            0deg,
-            #00000080,
-            #00000080
-        )
-        ,url("img/tecnico-profesional.jpg");
+    .carta:first-child {
+        background-image: linear-gradient(0deg,
+                #00000080,
+                #00000080), url("img/tecnico-profesional.jpg");
 
     }
 
-    .carta:nth-child(2){
-        background-image: linear-gradient(
-            0deg,
-            #00000080,
-            #00000080
-        )
-        ,url("img/informacion.jpg");
+    .carta:nth-child(2) {
+        background-image: linear-gradient(0deg,
+                #00000080,
+                #00000080), url("img/informacion.jpg");
     }
 
-    .carta:nth-child(3){
-        background-image: linear-gradient(
-            0deg,
-            #00000080,
-            #00000080
-        )
-        ,url("img/mecanico-industrial.jpg");
+    .carta:nth-child(3) {
+        background-image: linear-gradient(0deg,
+                #00000080,
+                #00000080), url("img/mecanico-industrial.jpg");
 
     }
 
-    #caracteristicas{
+    #caracteristicas {
         background-image: url("img/organizar.jpg");
         background-repeat: no-repeat;
         background-size: 500px 400px;
         background-position: calc(100vw - 500px) 120px;
     }
 
-    #caracteristicas .container{
+    #caracteristicas .container {
         text-align: initial;
     }
 
-    #caracteristicas ul{
+    #caracteristicas ul {
         margin-left: 100px;
     }
 
-    #ingresa h2{
+    #ingresa h2 {
         font-size: 5em;
     }
 
-    #ingresa button{
+    #ingresa button {
         font-size: 2em;
     }
 
-    .slide{
+    .slide {
         margin-top: 10px;
     }
-    
-    .slide img{
+
+    .slide img {
         height: 65vh;
     }
 
-    .footer-items{
-        grid-template-columns: 2fr 1fr max-content max-content 1fr ;
+    .footer-items {
+        grid-template-columns: 2fr 1fr max-content max-content 1fr;
         gap: 2em;
     }
 
-    .footer-nav{
+    .footer-nav {
         margin-top: 0;
 
     }
 
-    .footer-media{
+    .footer-media {
         margin-bottom: 1em;
     }
-  
-    .footer-social{
+
+    .footer-social {
         margin-top: 0em;
-        
+
     }
-     
-    .footer_media-last{
+
+    .footer_media-last {
         margin-right: 0;
     }
-
-
 
 }
 
 @media (min-width: 1200px) {
-    #caracteristicas{
+    #caracteristicas {
         background-position-x: calc(100vw - 800px);
     }
 
