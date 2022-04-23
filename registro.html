@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/Icono_Gas_Natural.png">
+
     <link rel="stylesheet" href="style_registro.css">
 
     <title>Registro</title>
@@ -30,45 +32,65 @@
                     </div>
                     <p class="text-muted mb-5">Ingresa la siguiente información para registrarte.</p>
 
-                    <form>
+                    <form class = " row g-3 needs-validation" novalidate> 
                         <div class="form-row mb-2">
                             <div class="form-group col-md-6">
                                 <label class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" placeholder="Tu nombre">
+                                <input type="text" class="form-control" placeholder="Tu nombre" required>
+                                <div class="invalid-feedback">
+                                    Ingrese nombre.
                             </div>
+                        </div>
+
+                        <div class="form-row mb-2">
                             <div class="form-group col-md-6">
                                 <label class="font-weight-bold">Apellido <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" placeholder="Tu apellido">
+                                <input type="text" class="form-control" placeholder="Tu apellido" required>
+                                <div class="invalid-feedback">
+                                    Ingrese su apellido.
                             </div>
-                        </div>
+
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Correo electrónico <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
+                            <div class="invalid-feedback">
+                                Ingrrese correo no valido.
                         </div>
                         <div class="form-group mb-3">
-                            <label class="font-weight-bold">Contraseña <span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" placeholder="Ingresa una contraseña">
+                            <label class="font-weight-bold">Contraseña <span class="text-danger">*</span></label >
+                            <input type="password" class="form-control" placeholder="Ingresa una contraseña"required>
+                            <div class="invalid-feedback">
+                                Ingrese contraseña.
                         </div>
                         <div class="form-group mb-3">
                             <label class="font-weight-bold">Repetir contraseña <span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" placeholder="Ingresa una contraseña">
+                            <input type="password" class="form-control" placeholder="Ingresa una contraseña"required>
+                            <div class="invalid-feedback">
+                                Repitac contraseña.
                         </div>
                         <div class="form-group mb-5">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label text-muted">Al seleccionar esta casilla aceptas nuestro aviso de privacidad y los términos y condiciones</label>
+                                <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                                <label for="invalidCheck" class="form-check-label text-muted">Al seleccionar esta casilla aceptas nuestro aviso de 
+                                    privacidad y los términos y condiciones</label>
+                                <div class="invalid-feedback">
+                                    Seleccione la casilla.
+                                </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary width-100">Regístrate</button>
+                        <button type="submit" class="btn btn-primary width-100">Regístrate</button>
                     </form>
                     <small class="d-inline-block text-muted mt-5">Derechos reservados | ©2022 AMGas</small>
                 </div>
            </div>
+           <p class="warnings" id="warnings"></p>
        </div>
    </section>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="valida_reg_log.js"></script>
   </body>
 </html>
