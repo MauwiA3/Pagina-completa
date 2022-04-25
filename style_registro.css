@@ -50,6 +50,7 @@ body {
 
 
 .form-control {
+    width: 200%;
     background-color: var(--color-dark-xx);
     border: 2px solid var(--color-dark-xx);
     border-radius: .2rem;
@@ -71,6 +72,10 @@ body {
 
 
 @media (max-width: 575.98px) {
+    .form-control{
+        width: 100%;
+    }
+
     .p-6 {
         padding: 2rem;
     }
