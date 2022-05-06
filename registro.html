@@ -1,96 +1,119 @@
 <!doctype html>
 <html lang="es-cl">
-  <head>
+
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/Icono_Gas_Natural.png">
 
-    <link rel="stylesheet" href="style_registro.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Registro</title>
-  </head>
-  <body>
-   <section class="contact-box">
-       <div class="row no-gutters bg-dark">
-           <div class="col-xl-5 col-lg-12 register-bg">
-            <div class="position-absolute testiomonial p-4">
-                <h3 class="font-weight-bold text-light">Infórmate  de mis servicios.</h3>
-                <p class="lead text-light">La mejora y comodidad de tu hogar está aquí.</p>
+</head>
+
+<body class="formulario_registro">
+
+    <section class="contact-box">
+        <div class="row no-gutters bg-dark">
+            <div class="col-xl-5 col-lg-12 register-bg">
+                <div class="position-absolute testiomonial p-4">
+                    <h3 class="font-weight-bold text-light">Infórmate de mis servicios.</h3>
+                    <p class="lead text-light">La mejora y comodidad de tu hogar está aquí.</p>
+                </div>
             </div>
-           </div>
-           <div class="col-xl-7 col-lg-12 d-flex">
+            
+            <div class="col-xl-7 col-lg-12 d-flex">
                 <div class="container align-self-center p-6">
                     <h1 class="font-weight-bold mb-3">Crea tu cuenta gratis</h1>
                     <div class="form-group">
-                        <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i class="icon ion-logo-google lead align-middle mr-2"></i> Google </button>
-                        <button class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><i class="icon ion-logo-facebook lead align-middle mr-2"></i> Facebook</button>
+                        <button class="btn btn-outline-dark d-inline-block text-light mr-2 mb-3 width-100"><i
+                                class="icon ion-logo-google lead align-middle mr-2"></i> Google </button>
+                        <button class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><i
+                                class="icon ion-logo-facebook lead align-middle mr-2"></i> Facebook</button>
                     </div>
                     <p class="text-muted mb-5">Ingresa la siguiente información para registrarte.</p>
 
-                    <form class = " row g-3 needs-validation" novalidate> 
+                    <form class=" row g-3 needs-validation" novalidate>
                         <div class="form-row mb-2">
                             <div class="form-group col-md-6">
                                 <label class="font-weight-bold">Nombre <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" placeholder="Tu nombre" required>
                                 <div class="invalid-feedback">
                                     Ingrese nombre.
-                            </div>
-                        </div>
-
-                        <div class="form-row mb-2">
-                            <div class="form-group col-md-6">
-                                <label class="font-weight-bold">Apellido <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" placeholder="Tu apellido" required>
-                                <div class="invalid-feedback">
-                                    Ingrese su apellido.
-                            </div>
-
-                        <div class="form-group mb-3">
-                            <label class="font-weight-bold">Correo electrónico <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
-                            <div class="invalid-feedback">
-                                Ingrrese correo no valido.
-                        </div>
-                        <div class="form-group mb-3">
-                            <label class="font-weight-bold">Contraseña <span class="text-danger">*</span></label >
-                            <input type="password" class="form-control" placeholder="Ingresa una contraseña"required>
-                            <div class="invalid-feedback">
-                                Ingrese contraseña.
-                        </div>
-                        <div class="form-group mb-3">
-                            <label class="font-weight-bold">Repetir contraseña <span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" placeholder="Ingresa una contraseña"required>
-                            <div class="invalid-feedback">
-                                Repita la contraseña.
-                        </div>
-                        <div class="form-group mb-5">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="invalidCheck" required>
-                                <label for="invalidCheck" class="form-check-label text-muted">Al seleccionar esta casilla aceptas nuestro aviso de 
-                                    privacidad y los términos y condiciones</label>
-                                <div class="invalid-feedback">
-                                    Seleccione la casilla.
                                 </div>
                             </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary width-100">Regístrate</button>
+
+                            <div class="form-row mb-2">
+                                <div class="form-group col-md-6">
+                                    <label class="font-weight-bold">Apellido <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Tu apellido" required>
+                                    <div class="invalid-feedback">
+                                        Ingrese su apellido.
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label class="font-weight-bold">Correo electrónico <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control"
+                                            placeholder="Ingresa tu correo electrónico" required>
+                                        <div class="invalid-feedback">
+                                            Ingrrese correo no valido.
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label class="font-weight-bold">Contraseña <span
+                                                    class="text-danger">*</span></label>
+                                            <input type="password" class="form-control"
+                                                placeholder="Ingresa una contraseña" required>
+                                            <div class="invalid-feedback">
+                                                Ingrese contraseña.
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label class="font-weight-bold">Repetir contraseña <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="password" class="form-control"
+                                                    placeholder="Ingresa una contraseña" required>
+                                                <div class="invalid-feedback">
+                                                    Repita la contraseña.
+                                                </div>
+                                                <div class="form-group mb-5">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="invalidCheck" required>
+                                                        <label for="invalidCheck" class="form-check-label text-muted">Al
+                                                            seleccionar esta casilla aceptas nuestro aviso de
+                                                            privacidad y los términos y condiciones</label>
+                                                        <div class="invalid-feedback">
+                                                            Seleccione la casilla.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit"
+                                                    class="btn btn-primary width-100">Regístrate</button>
                     </form>
                     <small class="d-inline-block text-muted mt-5">Derechos reservados | ©2022 AMGas</small>
                 </div>
-           </div>
-           <p class="warnings" id="warnings"></p>
-       </div>
-   </section>
+            </div>
+            <p class="warnings" id="warnings"></p>
+        </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
     <script src="valida_reg_log.js"></script>
-  </body>
+</body>
+
 </html>
