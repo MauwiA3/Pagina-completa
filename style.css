@@ -977,3 +977,17 @@
         min-height: 50vh;
     }
 }
+
+/*-------------------------------------------------------------*/
+/*CSS DE API*/
+
+.api body {
+    background: #41295a;
+    background: -webkit-linear-gradient(to right, #310745, #41295a);
+    background: linear-gradient(to right, #2F0743, #41295a);
+}
+
+.api table thead {
+    background: #41295a;
+    color: #ffffff;
+}
